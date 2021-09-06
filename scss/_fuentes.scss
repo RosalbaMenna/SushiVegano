@@ -1,0 +1,71 @@
+
+$misterio: #18362F;
+$pDesktop: 20px;
+$fontFamily: 'Roboto', sans-serif;
+$size: 18px;
+$color: #4aa892;
+
+
+.col-lg-6{
+	p{
+	font:$pDesktop;
+	family:$fontFamily;
+	weight:bold;
+	size: 18px;
+	}
+}
+
+$vista:desktop;
+
+body {
+	@if $vista == desktop {
+		@media only screen and (min-width:1024px){
+		h1{font-size:5em;}	
+		h2{font-size:4em;}
+		}	
+		}@else if $vista == mobile {
+			h1{
+				font-size:20px;
+				font: 'Roboto';
+			}
+			h2 {
+				font-size:18px;
+			}
+			}@else{
+				h1{font-size: 50px;}
+				h2{font-size: 40px;}
+			}					
+	}
+
+
+@mixin textos ($color, $size) {
+	color: $color;
+	font-size: $size;
+
+}
+
+p {
+	@include textos (negro, 5em);
+}
+
+.bgColorBlue:hover {
+  background-color: #4aa892;
+  transform: scale(1.4), translateX(30px);
+  filter: drop-shadow(82px 28px 68px #ffffff);
+  transition: all 1s; 
+ 
+}
+
+.bgColorBlue:hover form {
+  color: mistyrose;
+  transition: all 0.4s;
+}
+  
+
+
+
+
+
+
+
+
